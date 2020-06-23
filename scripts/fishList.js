@@ -12,19 +12,19 @@ import Fish from './fish.js'
 
 const showHolyFish = () => {
   const holyFish = fishData.getFishesMultiplesOf3()
-
+console.log(holyFish)
   let domString = '';
 
   domString += '<div class="card">';
   domString += '<div class="card-header">Holy Fish</div>';
   domString += '<ul class="list-group list-group-flush">';
   for (const fish of holyFish) {
-
       domString += Fish(fish) 
-      console.log(domString)
+      return domString
   }
  domString += '</ul>';
  domString += '</div>';
+
 utils.printToDomFunction('holyFishList', domString)
 }
 
@@ -72,8 +72,8 @@ for(const fish of restOfFish) {
 // Invoke all three functions here
 const buildFishList = () => {
   showHolyFish();
-  showSoldierFish();
-  showRestOfFish();
+  //showSoldierFish();
+ // showRestOfFish();
   };
 
   export default { buildFishList }

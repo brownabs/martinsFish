@@ -2,6 +2,7 @@
 const printToDomFunction = (divId, textToPrint) => {
 
   $(`#${divId}`).html(textToPrint);
+  console.log("this function is running")
 
 };
 

@@ -4,7 +4,7 @@ const fishes = [
     id: 1,
     image: "images/fish1.jpg",
     species: "Flounder",
-    length: "3 inches",
+    length: "9 inches",
     name: "Clifford",
     locationHarvested: "Wisconsin",
     diet: "fish food",
@@ -13,7 +13,7 @@ const fishes = [
     id: 2,
     image: "images/fish2.jpg",
     species: "Salmon",
-    length: "5 inches",
+    length: "25 inches",
     name: "Stephen",
     locationHarvested: "New Jersey",
     diet: "fish food",
@@ -22,7 +22,7 @@ const fishes = [
     id: 3,
     image: "images/fish3.jpg",
     species: "Bass",
-    length: "1 inches",
+    length: "19 inches",
     name: "Winona",
     locationHarvested: "Florida",
     diet: "fish food",
@@ -80,46 +80,39 @@ const maintenanceTips = [
   },
 ];
 
-//fetch call for all fish - do I need that in main js or just in fishList??
-const getAllFishes = () => {
-  return fishes;
-};
-//fetch call for specific fish with id
 
-//fetch call for fish with multiples of 3
+
+//function for fish with multiples of 3
 const getFishesMultiplesOf3 = () => {
   const holyFish = [];
-
   for (const fish of fishes) {
+    console.log(fish)
     let firstValue = fish.length.split(" ")[0];
     let number = parseInt(firstValue, 10);
+    console.log(number)
     if (number % 3 === 0) {
       holyFish.push(fish);
     }
   }
-
+  console.log(holyFish)
   return holyFish;
 };
 
-//fetch call for fish with multiples of 5
+//function for fish with multiples of 5
 const getFishesMultiplesOf5 = () => {
   const soldierFish = [];
   for (const fish of fishes) {
-    fishes.forEach((fish) => {
-      let firstValue = fish.length.split(" ")[0];
-      let number = parseInt(firstValue, 10);
-      console.log(number);
-      if (number % 5 === 0) {
-        return fish;
-      }
+    let firstValue = fish.length.split(" ")[0];
+    let number = parseInt(firstValue, 10);
+    console.log(number)
+    if (number % 3 === 0) {
       soldierFish.push(fish);
-    });
-    console.log(soldierFish)
-    return soldierFish;
+    }
   }
+  return soldierFish;
 };
 
-//fetch call for not special fish
+//function for not special fish
 const getRestOfFish = () => {
   const restOfFish = [];
   for (const fish of fishes) {
@@ -133,11 +126,8 @@ const getRestOfFish = () => {
   }
 };
 
-//add a fish to fishes array of objects
 
-//delete a fish from fishes array of objects
 export default {
-  getAllFishes,
   getFishesMultiplesOf3,
   getFishesMultiplesOf5,
   getRestOfFish,
