@@ -27,6 +27,15 @@ const fishes = [
     locationHarvested: "Florida",
     diet: "fish food",
   },
+  {
+    id: 4,
+    image: "images/fish3.jpg",
+    species: "Beta",
+    length: "18 inches",
+    name: "Rupert",
+    locationHarvested: "Florida",
+    diet: "fish food",
+  },
 ];
 
 const quotes = [
@@ -105,10 +114,11 @@ const getFishesMultiplesOf5 = () => {
     let firstValue = fish.length.split(" ")[0];
     let number = parseInt(firstValue, 10);
     console.log(number)
-    if (number % 3 === 0) {
+    if (number % 5 === 0) {
       soldierFish.push(fish);
     }
   }
+  console.log(soldierFish)
   return soldierFish;
 };
 
@@ -122,6 +132,7 @@ const getRestOfFish = () => {
     if (number % 5 !== 0 && number % 3 !== 0) {
       restOfFish.push(fish);
     }
+    console.log(restOfFish)
     return restOfFish;
   }
 };
