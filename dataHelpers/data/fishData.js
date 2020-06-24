@@ -93,6 +93,7 @@ const maintenanceTips = [
 
 // function for fish with multiples of 3
 
+// eslint-disable-next-line consistent-return
 const getFishesMultiplesOf3 = () => {
   const holyFish = [];
   // eslint-disable-next-line no-restricted-syntax
@@ -103,11 +104,13 @@ const getFishesMultiplesOf3 = () => {
     if (number % 3 === 0) {
       holyFish.push(fish);
     }
+    return holyFish;
   }
-  return holyFish;
+  // return holyFish;
 };
 
 // function for fish with multiples of 5
+// eslint-disable-next-line consistent-return
 const getFishesMultiplesOf5 = () => {
   const soldierFish = [];
   // eslint-disable-next-line no-restricted-syntax
@@ -117,11 +120,13 @@ const getFishesMultiplesOf5 = () => {
     if (number % 5 === 0) {
       soldierFish.push(fish);
     }
+    return soldierFish;
   }
-  return soldierFish;
+  // return soldierFish;
 };
 
 // function for not special fish
+// eslint-disable-next-line consistent-return
 const getRestOfFish = () => {
   const restOfFish = [];
   // eslint-disable-next-line no-restricted-syntax
@@ -131,9 +136,9 @@ const getRestOfFish = () => {
     if (number % 5 !== 0 && number % 3 !== 0) {
       restOfFish.push(fish);
     }
-    // is this why it was working and not the other two functions - return statement here - return restOfFish;
+    return restOfFish;
   }
-  return restOfFish;
+  // return restOfFish;
 };
 
 export default {
