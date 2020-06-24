@@ -106,7 +106,7 @@ const getFishesMultiplesOf3 = () => {
     }
     return holyFish;
   }
-  // return holyFish;
+  return holyFish;
 };
 
 // function for fish with multiples of 5
@@ -122,7 +122,7 @@ const getFishesMultiplesOf5 = () => {
     }
     return soldierFish;
   }
-  // return soldierFish;
+  return soldierFish;
 };
 
 // function for not special fish
@@ -138,7 +138,7 @@ const getRestOfFish = () => {
     }
     return restOfFish;
   }
-  // return restOfFish;
+  return restOfFish;
 };
 
 export default {
