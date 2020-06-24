@@ -1,7 +1,6 @@
-//this is the individual fish card so I don't have to repeat HTML code
+// this is the individual fish card so I don't have to repeat HTML code
 
-const Fish = (fish) => {
-  return `
+const Fish = (fish) => `
       <section class="fish-card">
           <div>
               <img class="fish__image" src="${fish.image}" alt="">
@@ -14,6 +13,5 @@ const Fish = (fish) => {
           </dialog>
       </section>
   `;
-};
 
 export default Fish;

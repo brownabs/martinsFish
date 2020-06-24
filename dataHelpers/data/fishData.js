@@ -1,43 +1,43 @@
-//where fish data will be and functions to retrieve that data
+// where fish data will be and functions to retrieve that data
 const fishes = [
   {
     id: 1,
-    image: "images/fish1.jpg",
-    species: "Flounder",
-    length: "9 inches",
-    name: "Clifford",
-    locationHarvested: "Wisconsin",
-    diet: "fish food",
+    image: 'images/fish1.jpg',
+    species: 'Flounder',
+    length: '9 inches',
+    name: 'Clifford',
+    locationHarvested: 'Wisconsin',
+    diet: 'fish food',
   },
   {
     id: 2,
-    image: "images/fish2.jpg",
-    species: "Salmon",
-    length: "25 inches",
-    name: "Stephen",
-    locationHarvested: "New Jersey",
-    diet: "fish food",
+    image: 'images/fish2.jpg',
+    species: 'Salmon',
+    length: '25 inches',
+    name: 'Stephen',
+    locationHarvested: 'New Jersey',
+    diet: 'fish food',
   },
   {
     id: 3,
-    image: "images/fish3.jpg",
-    species: "Bass",
-    length: "19 inches",
-    name: "Winona",
-    locationHarvested: "Florida",
-    diet: "fish food",
+    image: 'images/fish3.jpg',
+    species: 'Bass',
+    length: '19 inches',
+    name: 'Winona',
+    locationHarvested: 'Florida',
+    diet: 'fish food',
   },
   {
     id: 4,
-    image: "images/fish3.jpg",
-    species: "Beta",
-    length: "18 inches",
-    name: "Rupert",
-    locationHarvested: "Florida",
-    diet: "fish food",
+    image: 'images/fish3.jpg',
+    species: 'Beta',
+    length: '18 inches',
+    name: 'Rupert',
+    locationHarvested: 'Florida',
+    diet: 'fish food',
   },
 ];
-
+/*
 const quotes = [
   {
     id: 1,
@@ -89,54 +89,52 @@ const maintenanceTips = [
   },
 ];
 
+*/
 
+// function for fish with multiples of 3
 
-//function for fish with multiples of 3
 const getFishesMultiplesOf3 = () => {
   const holyFish = [];
+  // eslint-disable-next-line no-restricted-syntax
   for (const fish of fishes) {
-    console.log(fish)
-    let firstValue = fish.length.split(" ")[0];
-    let number = parseInt(firstValue, 10);
-    console.log(number)
+    // eslint-disable-next-line prefer-destructuring
+    const firstValue = fish.length.split('')[0];
+    const number = parseInt(firstValue, 10);
     if (number % 3 === 0) {
       holyFish.push(fish);
     }
   }
-  console.log(holyFish)
   return holyFish;
 };
 
-//function for fish with multiples of 5
+// function for fish with multiples of 5
 const getFishesMultiplesOf5 = () => {
   const soldierFish = [];
+  // eslint-disable-next-line no-restricted-syntax
   for (const fish of fishes) {
-    let firstValue = fish.length.split(" ")[0];
-    let number = parseInt(firstValue, 10);
-    console.log(number)
+    const firstValue = fish.length.split('')[0];
+    const number = parseInt(firstValue, 10);
     if (number % 5 === 0) {
       soldierFish.push(fish);
     }
   }
-  console.log(soldierFish)
   return soldierFish;
 };
 
-//function for not special fish
+// function for not special fish
 const getRestOfFish = () => {
   const restOfFish = [];
+  // eslint-disable-next-line no-restricted-syntax
   for (const fish of fishes) {
-    let firstValue = fish.length.split(" ")[0];
-    let number = parseInt(firstValue, 10);
-    console.log(number);
+    const firstValue = fish.length.split('')[0];
+    const number = parseInt(firstValue, 10);
     if (number % 5 !== 0 && number % 3 !== 0) {
       restOfFish.push(fish);
     }
-    console.log(restOfFish)
-    return restOfFish;
+    // is this why it was working and not the other two functions - return statement here - return restOfFish;
   }
+  return restOfFish;
 };
-
 
 export default {
   getFishesMultiplesOf3,

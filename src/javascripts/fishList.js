@@ -1,6 +1,6 @@
-import fishData from "../dataHelpers/data/fishData.js";
-import Fish from "./fish.js";
-import utils from '../dataHelpers/utils.js'
+import fishData from '../../dataHelpers/data/fishData';
+import Fish from './fish';
+import utils from '../../dataHelpers/utils';
 
 /*
           Invoke the specific Fish component function
@@ -11,54 +11,58 @@ import utils from '../dataHelpers/utils.js'
 
 const showHolyFish = () => {
   const holyFish = fishData.getFishesMultiplesOf3();
-  let domString = "";
+  let domString = '';
   domString += '<div class="card">';
   domString += '<div class="card-header">Holy Fish</div>';
   domString += '<ul class="list-group list-group-flush">';
+
+  // eslint-disable-next-line no-restricted-syntax
   for (const fish of holyFish) {
     domString += Fish(fish);
     return domString;
   }
-  domString += "</ul>";
-  domString += "</div>";
+  domString += '</ul>';
+  domString += '</div>';
 
-  utils.printToDomFunction("holyFishList", domString);
+  return utils.printToDomFunction('holyFishList', domString);
 };
 
 // Function to show soldier fish in the browser
 const showSoldierFish = () => {
   const soldierFish = fishData.getFishesMultiplesOf5();
-  let domString = "";
+  let domString = '';
   domString += '<div class="card">';
   domString += '<div class="card-header">Soldier Fish</div>';
   domString += '<ul class="list-group list-group-flush">';
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const fish of soldierFish) {
     domString += Fish(fish);
     return domString;
   }
-  domString += "</ul>";
-  domString += "</div>";
+  domString += '</ul>';
+  domString += '</div>';
 
-utils.printToDomFunction("soldierFishList", domString)
+  return utils.printToDomFunction('soldierFishList', domString);
 };
 
 // Function to show common fish in the browser
 const showRestOfFish = () => {
   const restOfFish = fishData.getRestOfFish();
-  let domString = "";
+  let domString = '';
   domString += '<div class="card">';
   domString += '<div class="card-header">Rest of the  Fish</div>';
   domString += '<ul class="list-group list-group-flush">';
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const fish of restOfFish) {
     domString += Fish(fish);
     return domString;
   }
-  domString += "</ul>";
-  domString += "</div>";
+  domString += '</ul>';
+  domString += '</div>';
 
-  utils.printToDomFunction("restOfFishList", domString);
+  return utils.printToDomFunction('restOfFishList', domString);
 };
 
 // Invoke all three functions here
