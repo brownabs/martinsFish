@@ -9,6 +9,7 @@ import utils from '../../dataHelpers/utils';
           domString variable with `+=`
       */
 
+// eslint-disable-next-line consistent-return
 const showHolyFish = () => {
   const holyFish = fishData.getFishesMultiplesOf3();
   let domString = '';
